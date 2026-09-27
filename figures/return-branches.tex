@@ -1,0 +1,23 @@
+\documentclass[border=4pt]{standalone}
+\input{figure-style}
+\usepackage{circuitikz}
+\begin{document}
+\begin{circuitikz}[american voltages,american currents,font=\small]
+\draw[elemA] (0,0) to[L,l=$L_1$,i<=$i_1$] (0,2.5)
+ to[L,l=$L_2$,i<=$i_2$] (0,5);
+\draw (0,5) node[circ,label=above:$b$] {} -- (6,5);
+\draw (0,2.5) node[circ,label=left:$a$] {} -- (1.3,2.5)
+ arc[start angle=180,end angle=0,radius=.2] -- (4,2.5);
+\draw (0,0) node[circ,label=below:$c$] {} -- (6,0);
+\draw[elemA] (1.5,5) to[C,l=$C$] (1.5,2.8) -- (1.5,0);
+\draw[elemB] (4,5) to[R,l=$1/G_a$,i=$j_a$] (4,2.5);
+\draw[elemB] (6,5) to[R,l=$1/G_o$,i=$j_o$] (6,0);
+\draw (-3,2.5) to[V,l=$u$] (-3,0);
+\draw (-3,2.5) to[R,l=$R_s$] (0,2.5);
+\draw (-3,0)--(0,0);
+\node[align=center,elemC] at (4.5,6.15) {selector/controller supplies\\are additional physical ports};
+\draw[->,elemC,dashed] (4,5.7)--(4,5.15);
+\draw[->,elemC,dashed] (5.5,5.7)--(6,5.15);
+\node[align=center] at (3,-1) {capacitor return fixed at $c$\\two receiver returns remain distinct};
+\end{circuitikz}
+\end{document}
