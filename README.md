@@ -80,3 +80,5 @@ the next experiment.
 ## Article
 
 [Read the article (PDF)](finite-transfers-and-open-energy-balances.pdf) · [Manuscript source](finite-transfers-and-open-energy-balances.md)
+
+`make pdf` records the UTC build time on the first page, followed by this repository’s GitHub link. The timestamp updates when the PDF is rebuilt; an up-to-date PDF keeps its existing value.

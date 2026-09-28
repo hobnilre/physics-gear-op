@@ -46,9 +46,7 @@ urlcolor: MidnightBlue
 citecolor: MidnightBlue
 ---
 
-Latest PDF on GitHub:
-
-<https://github.com/hobnilre/physics-gear-op/blob/main/finite-transfers-and-open-energy-balances.pdf>
+\begingroup\scriptsize\noindent PDF created: \pdfbuildtimestamp\par\noindent Latest on GitHub: \url{https://github.com/hobnilre/physics-gear-op}\par\endgroup
 
 # Introduction: quantities that require separate experiments
 
