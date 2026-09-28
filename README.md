@@ -77,8 +77,17 @@ different energy predictions side by side. Unresolved transfers retain their
 sign, magnitude, operating conditions, and completed checks as targets for
 the next experiment.
 
-## Article
+## Article and build
 
 [Read the article (PDF)](finite-transfers-and-open-energy-balances.pdf) · [Manuscript source](finite-transfers-and-open-energy-balances.md)
 
-`make pdf` records the UTC build time on the first page, followed by this repository’s GitHub link. The timestamp updates when the PDF is rebuilt; an up-to-date PDF keeps its existing value.
+Install GNU Make, Pandoc, XeLaTeX and the TeX Gyre fonts, including the LaTeX
+packages used by `preamble.tex` and the standalone TikZ/PGFPlots figures. Run `make pdf`
+from this repository. The build uses only files in this checkout; no sibling
+repository or private working files are needed.
+
+The first page gives the PDF creation time in UTC, followed by this repository's
+GitHub link. An up-to-date PDF keeps its timestamp; `make -B pdf` forces a rebuild.
+Intermediates go to ignored `build/` by default; `BUILD_DIR=/absolute/path`
+selects another location. `make clean` removes that build directory and keeps
+the published PDF and figure assets.
