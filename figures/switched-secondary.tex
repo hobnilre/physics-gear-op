@@ -1,0 +1,31 @@
+\documentclass[border=4pt]{standalone}
+\input{figure-style}
+\usepackage[american]{circuitikz}
+\begin{document}
+\begin{circuitikz}[font=\sffamily\small,>=Latex]
+\node[font=\sffamily\bfseries,anchor=west] at (-2,5.75) {Isolated primary, persistent secondary sections, two switched RC branches};
+\draw (-1,4) to[L,l=$N_p$] (-1,0) node[below] {$O$};
+\draw (-1,4)--(-2,4) to[sV,l=$U$] (-2,0)--(-1,0);
+\draw[gray,thick] (-.35,.3)--(-.35,3.7) (-.2,.3)--(-.2,3.7);
+\draw (1,4) node[above] {$A$} to[L,l=$N_u$] (1,2) node[left] {$T$}
+ to[L,l=$N_l$] (1,0) node[below] {$B$};
+\draw (1,4)--(3,4) to[nos,l=$S_{A+}$] (5,4)--(6,4);
+\draw (1,2)--(3,2) to[nos,l=$S_{T+}$] (5,2)--(6,2)--(6,4);
+\fill (1,2) circle (2pt);
+\draw (6,4) node[above] {$X_+$} to[R,l=$R_+$] (8,4)
+ node[above] {$Q_+$} to[C,l=$C_+$] (10,4)--(11,4)--(11,-.5)--(6.17,-.5) arc(0:180:.17)--(1,-.5)--(1,0);
+\draw (3,2)--(3,1) to[nos,l=$S_{T-}$] (5,1)--(6,1)--(6,-2);
+\fill (3,2) circle (2pt);
+\draw (1,0)--(2,0)--(2,-2) to[nos,l=$S_{B-}$] (5,-2)--(6,-2);
+\fill (1,0) circle (2pt);
+\draw (6,-2) node[below] {$X_-$} to[R,l=$R_-$] (8,-2)
+ node[below] {$Q_-$} to[C,l=$C_-$] (10,-2)--(12,-2)--(12,5.15)--(1,5.15)--(1,4);
+\fill (1,4) circle (2pt);
+\fill (2,-.5) circle (2pt);
+\fill (6,4) circle (2pt);
+\fill (6,-2) circle (2pt);
+\node[align=center] at (5,-3.15)
+ {Cell orientations: $v_+=V_{Q+}-V_B$, $v_-=V_{Q-}-V_A$.\\
+ Selector edges, copper, leakage, parasitics, clamps and gate supplies follow the finite equations.};
+\end{circuitikz}
+\end{document}

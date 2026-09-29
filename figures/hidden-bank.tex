@@ -1,0 +1,24 @@
+\documentclass[border=4pt]{standalone}
+\input{figure-style}
+\usepackage[american]{circuitikz}
+\begin{document}
+\begin{circuitikz}[font=\sffamily\small,>=Latex]
+\node[font=\sffamily\bfseries] at (2.7,3.1) {Same series observation};
+\draw (0,2) node[left] {$X_1$} to[C,l=$C_1$] (2.4,2) node[above] {$Y_1$}
+ --(3.3,2) node[above] {$X_2$} to[C,l=$C_2$] (5.7,2) node[right] {$Y_2$};
+\draw (0,2)--(0,0) to[R,l=$R_L$] (5.7,0)--(5.7,2);
+\node at (1.1,1.35) {$+\ v_1\ -$};
+\node at (4.4,1.35) {$+\ v_2\ -$};
+\node[align=center] at (2.8,-1) {$C_1=C_2=1\,\mathrm F,\quad v_1+v_2=2\,\mathrm V$ initially\\
+ $(v_1,v_2)=(1,1)\,\mathrm V:\ E_C=1\,\mathrm J$\\
+ $(v_1,v_2)=(3,-1)\,\mathrm V:\ E_C=5\,\mathrm J$};
+\node[font=\sffamily\bfseries] at (9.7,3.1) {New parallel paths};
+\draw (8,2) node[above] {$X_1$} to[C,l=$C_1$] (8,0) node[below] {$Y_1$};
+\draw (11.4,2) node[above] {$X_2$} to[C,l=$C_2$] (11.4,0) node[below] {$Y_2$};
+\draw (8,2) to[R,l=$R_s+R_L$] (11.4,2);
+\draw (8,0)--(11.4,0);
+\node[align=center] at (9.7,-1.1) {Finite exchange paths divide work.\\
+ Cell orientations persist.\\
+ The earlier series link is opened.};
+\end{circuitikz}
+\end{document}
