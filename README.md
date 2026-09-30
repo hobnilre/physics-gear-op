@@ -24,8 +24,10 @@ questions about switched electrical returns and prepared cell states.
   conditions.
 - **The same terminal can conceal different energy.** Series cells prepared
   at $(1,1)$ and $(3,-1)$ V give the same terminal history while retaining
-  1 and 5 J. A finite loaded-probe protocol defines binary identification;
-  a paired-work protocol retains preparation costs and actual final stores.
+  1 and 5 J. The finite graph has an exact precommutation difference bound
+  below $1/1000$ V; later binary discrimination remains conditional on a
+  separate loaded-probe separation. Paired receiver-work ordering remains
+  unevaluated, with preparation costs and actual final stores retained.
 - **Signs and work have separate proofs.** An LC exchange increases absolute
   charge from 10 to 28 C at unchanged total reactive energy. A finite shunt
   example proves every sign event throughout its window. Three-store reset
@@ -40,6 +42,12 @@ questions about switched electrical returns and prepared cell states.
   one loaded electrical-port observation set has a best possible worst-case
   initial-energy error of $1/100$ J on its two known preparations. Electrical,
   shaft and thermal observations test the remaining physical questions.
+
+The measurement route starts with one loaded planet output, one finite
+return/probe change and two known cell preparations before the shared-output
+assembly. A 10 s probe response over a 5 ms window is explicit in the latter
+observation obstruction. The complete supplied-machine model is retained in
+an appendix beside its return-map qualifications.
 
 The article retains 54 selected questions and bounded outcomes, with each
 identifier beside its local model. All results are exact or explicitly
