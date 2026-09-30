@@ -2,7 +2,7 @@
 title: "Finite Transfers and Open Energy Balances"
 subtitle: "Physical tests of loaded gears, switched returns, and prepared states"
 author: "Hob Nilre & Bo C. Herlin"
-date: "2026-09-30"
+date: "2026-09-27"
 abstract: |
   Three questions organize the physical tests of a four-shaft gear and
   related circuits: what an attached load changes, what a changed return
