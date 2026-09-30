@@ -34,8 +34,14 @@ questions about switched electrical returns and prepared cell states.
   current, material, thermal and supply observations have separate roles.
   The article distinguishes an exact control, acquisition of an unknown
   physical law, a calibrated comparison and a complete energy residual.
+- **Finite return, repeated operation and energy identification differ.** A
+  six-channel shared-output graph has a certified prepared 5 ms transition.
+  An insulated timing-drive model cannot return its full thermal state;
+  one loaded electrical-port observation set has a best possible worst-case
+  initial-energy error of $1/100$ J on its two known preparations. Electrical,
+  shaft and thermal observations test the remaining physical questions.
 
-The article retains 51 selected questions and bounded outcomes, with each
+The article retains 54 selected questions and bounded outcomes, with each
 identifier beside its local model. All results are exact or explicitly
 conditional. No apparatus measurements are reported, and broader physical
 questions remain distinct from resolved model examples.

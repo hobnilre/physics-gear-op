@@ -1,0 +1,69 @@
+\documentclass[border=4pt]{standalone}
+\input{figure-style}
+\usepackage[american]{circuitikz}
+\begin{document}
+\begin{circuitikz}[font=\sffamily\small,>=Latex]
+\node[anchor=west,font=\sffamily\bfseries] at (-2.2,7.1)
+ {A. One channel, $j=1,\ldots,6$: isolated input and two persistent branches};
+\draw (-.5,5) to[L,l_=$P_j$] (-.5,1) node[below] {$O_j$};
+\draw (-.5,5) -- (-.5,6) to[R,l=$R_s$] (-2,6)
+ -- (-2,5) to[V,l_=$U_j$] (-2,1) -- (-.5,1);
+\node[anchor=west] at (-.3,5.8) {$p_j$};
+\fill (-.35,4.75) circle (1.7pt);
+\draw[gray,thick] (.55,1.3)--(.55,4.7) (.72,1.3)--(.72,4.7);
+\node[align=center,fill=white,inner sep=2pt] at (.65,3) {input\\core $j$};
+\draw (2,5) node[above] {$A_j$} to[L,l_=$U_j^{\rm w}$] (2,3)
+ node[left] {$T_j$} to[L,l_=$D_j^{\rm w}$] (2,1) node[below left] {$B_j$};
+\fill (2.16,4.75) circle (1.7pt);
+\fill (2.16,2.75) circle (1.7pt);
+\draw (2,5)--(3.3,5) to[R,l=$g_{j1}^{-1}$] (5.1,5)--(6,5);
+\draw (2,3)--(3.3,3) to[R,l=$g_{j2}^{-1}$] (5.1,3)--(6,3)--(6,5);
+\draw (3,3)--(3,2) to[R,l=$g_{j3}^{-1}$] (5.1,2)--(6,2)--(6,.4);
+\draw (2,1)--(2,.4)--(3.3,.4) to[R,l_=$g_{j4}^{-1}$] (5.1,.4)--(6,.4);
+\foreach \x/\y in {2/5,2/3,2/1,3/3,6/5,6/.4}
+  \fill (\x,\y) circle (1.6pt);
+\draw[elemB] (6,5) node[above] {$X_{+j}$} to[L,l_=$B_{+j}$] (8.2,5)
+ --(9,5) node[above] {$Q_{+j}$} to[C,l_=$C_{+j}$] (11,5)
+ --(12,5) node[right] {$B_j$};
+\draw[elemB] (6,.4) node[below] {$X_{-j}$} to[L,l_=$B_{-j}$] (8.2,.4)
+ --(9,.4) node[above] {$Q_{-j}$} to[C,l_=$C_{-j}$] (11,.4)
+ --(12,.4) node[right] {$A_j$};
+\fill[elemB] (6.35,5.17) circle (1.7pt);
+\fill[elemB] (6.35,.57) circle (1.7pt);
+\draw[->,elemB] (6.6,5.75)--(7.8,5.75) node[midway,above] {$i_{+j}$};
+\draw[->,elemB] (6.6,1.15)--(7.8,1.15) node[midway,above] {$i_{-j}$};
+\node[align=center,text width=5.4cm] at (9.4,2.75)
+ {Both branches share the output core.\\[3pt]
+  Cell voltages: $Q_{+j}-B_j$ and $Q_{-j}-A_j$.};
+\node[anchor=west,align=left,text width=14.2cm] at (-2.2,-.9)
+ {Repeated $A_j,B_j$ labels denote the same channel conductors.
+  Returns with different names are unconnected. Finite selectors are shown as resistive paths.};
+\node[anchor=west,font=\sffamily\bfseries] at (-2.2,-2.2)
+ {B. Twelve separate branch windings, one shared output core, one receiver};
+\foreach \j in {1,...,6} {
+  \pgfmathsetmacro{\x}{-2+2.4*(\j-1)}
+  \draw[elemB] (\x,-3.25) to[L,l^={$B_{+\j}$}] (\x+1.55,-3.25);
+  \draw[elemB] (\x,-4.45) to[L,l^={$B_{-\j}$}] (\x+1.55,-4.45);
+  \fill[elemB] (\x+.1,-3.07) circle (1.5pt);
+  \fill[elemB] (\x+.1,-4.27) circle (1.5pt);
+  \draw[elemD,dashed] (\x+.77,-3.53)--(\x+.77,-5.25);
+}
+\draw[elemD,very thick] (-1.65,-5.25)--(11.15,-5.25)
+                       (-1.65,-5.42)--(11.15,-5.42);
+\node[anchor=east,fill=white,inner sep=2pt,text=elemD] at (11.6,-5.95)
+ {one common flux; finite individual leakage};
+\draw[elemD,dashed] (4.75,-5.42)--(4.75,-6.35);
+\draw[elemC] (3,-6.65) node[left] {$v_o$} to[L,l_=$O$] (6.5,-6.65)
+ node[right] {$B_o$};
+\fill[elemC] (3.3,-6.47) circle (1.7pt);
+\draw[->,elemC] (3.25,-6.05)--(4.1,-6.05) node[midway,above] {$i_o$};
+\draw (3,-6.65)--(3,-8) to[R,l_=$R_L$] (6.5,-8)--(6.5,-6.65);
+\fill (3,-6.65) circle (1.6pt);
+\fill (6.5,-6.65) circle (1.6pt);
+\node[align=left,anchor=west,text width=4.5cm] at (7.1,-7.4)
+ {Output capacitor, clamp and loaded probe also join this local return.};
+\node[anchor=west,text width=14.2cm,align=left] at (-2.2,-9.05)
+ {Panel B repeats the branch windings of panel A; it adds no conductors between channels.
+  Dashed links show magnetic coupling. The tables give copper, gates, parasitics, clamps and all seven probes.};
+\end{circuitikz}
+\end{document}
