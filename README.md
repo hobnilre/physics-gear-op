@@ -5,6 +5,19 @@ Physical tests of loaded gears, switched returns, and prepared states
 A self-contained companion to
 [*Frames, Returns, and Port Power*](https://github.com/hobnilre/physics-gear).
 
+## Main argument and technical appendices
+
+The short main text follows three measurement decisions: what a planet
+receiver changes, what an attached electrical branch changes, and what
+terminal observations identify about prepared energy. It derives the first
+comparisons and their independent work and endpoint uncertainty requirements.
+
+Seven appendices retain the complete mechanical, winding, switching,
+prepared-state, material and shared-output models. The supplied-machine
+specification, component bounds and detailed measurement comparisons remain
+in this same article and PDF. Simpler prepared-state observations precede
+the shared-output fixture.
+
 ## What this article adds, and why it matters
 
 The fourth central shaft gives a concrete first experiment: attach a receiver
