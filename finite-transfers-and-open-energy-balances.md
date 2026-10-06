@@ -197,6 +197,8 @@ develops these additional mechanical comparisons. Its dimensioned Oldham
 slot model has different forces from a Cardan cross; its result cannot
 identify the latter's spatial reactions.
 
+The loaded control predicts a change in reactions as well as delivered work. Testing that contrast is one step; a complete apparatus account also needs the other supports, drives and stored states.
+
 # One physical connection change
 \label{sec:connection-test}
 
@@ -269,6 +271,8 @@ every connection change. A full-to-tap return changes their circuit; a
 parallel/series bank is another graph. Clocked attraction, hybrid operation,
 magnetic admissibility and generator work have their own conditions.
 
+A probe or return wire can become part of the circuit it observes. Changing the voltage origin alone adds no such branch, while a physical attachment needs its own work and storage account.
+
 # What the terminal identifies
 
 Connect two equal capacitors of capacitance $C$ in series through a
@@ -302,6 +306,8 @@ fraction. Residual cell energy remains at finite $T$.
 This calculation specifies neither the preparation work nor the useful
 delivery in a different switched graph.
 
+A terminal reading can leave stored energy undetermined. An additional internal measurement or an identified reconnection test can provide information that the original trace lacks.
+
 ## Finite reconnection: established and remaining information
 
 The finite model in Appendix \ref{app:prepared} adds six node parasitics,
@@ -327,6 +333,8 @@ enclosure contains both signs, so receiver-work ordering remains unevaluated.
 The larger initial store alone does not determine that ordering. A richer
 observation or a longer window changes the identification question and
 requires its own complete graph and error bounds.
+
+A proved bound on an earlier signal does not establish separation of later loaded readings. Nor does a larger prepared store alone determine which receiver gets more work.
 
 # Deciding a difference and a complete remainder
 \label{sec:measurement-route}
@@ -382,6 +390,8 @@ General metrological treatment of inputs and correlations is described by
 [JCGM (2008)][gum]; the finite product and endpoint bounds here are derived
 directly and discard no second-order term.
 
+A narrow error bound is useful only when it covers the quantities actually observed. A missing physical transfer or store is missing information, not a larger error bar chosen afterward.
+
 ## A sequence of physical decisions
 
 Begin with the simplest comparison whose component laws and observations
@@ -429,6 +439,8 @@ including polarity, phase, endpoint and known-input controls. Appendix
 \ref{app:material} retains the thermal, magnetic and supply laws needed
 to evaluate a complete physical boundary. Missing constitutive information
 is an undetermined contribution; it is not an uncertainty allowance.
+
+The next observation should answer the particular unresolved question. A resolved load or probe contrast does not automatically settle prepared energy or a complete cycle.
 
 # Results and the next physical decision
 
@@ -1159,6 +1171,8 @@ work. A symmetric axial train can have zero transverse momentum; the
 rotor example distinguishes the vector laws without asserting that every
 train has this nonzero component. The nonparallel-axis energy comparison
 requires the full observed vector momentum [OP-EPI-27].
+
+Equal motion maps do not establish equal spatial force paths. The actual linkage and support mounting must supply the efforts and motions used in their work account.
 
 # Windings, switching and physical supplies
 \label{app:electrical}
@@ -2405,6 +2419,8 @@ Integration of the force and dashpot products gives
 The endpoints $(x,v)=(0,0),(0,3/10)$ are evaluated independently.
 Changing an observer coordinate alone performs none of this preparation.
 
+Hidden energy and useful work delivered later are separate quantities. Reconnection and loading determine the path between them, so the larger initial store alone cannot decide the delivery ordering.
+
 # Material, thermal, sensor and supply boundaries
 \label{app:material}
 
@@ -3155,6 +3171,8 @@ Ordinary synchronized electrical, torque/encoder and thermal instruments
 provide the relevant observables, but their calibration, loading and
 bandwidth must resolve the particular difference. No apparatus data or
 unmeasured physical remainder are assigned by these model results.
+
+A feasible prepared transition and a repeated full-state cycle are different claims. The larger fixture's thermal, supply and observation conditions must retain the scope of the result proved for it.
 
 # Supplied machine and component bounds
 \label{app:machine-companion}
